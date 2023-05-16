@@ -20,6 +20,10 @@ export default {
         'base-background': '#071422',
         'base-input': '#040F1A',
       },
+
+      backgroundImage: {
+        'background-image': 'url("/src/assets/background.svg")',
+      },
     },
   },
   variants: {
