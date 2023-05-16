@@ -5,7 +5,7 @@ import { Profile } from '../components/Profile';
 
 export function Home() {
   return (
-    <div className="max-w-[1440px] mx-auto bg-base-background w-screen h-screen">
+    <div className="max-w-[1440px] mx-auto bg-base-background">
       <Header />
       <div className="px-[288px] flex flex-col">
         <Profile />
@@ -14,7 +14,11 @@ export function Home() {
           <span className="text-sm text-base-span">6 publicações</span>
         </div>
         <Input />
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8 pb-[234 px]">
+          <Post />
+          <Post />
+          <Post />
+          <Post />
           <Post />
           <Post />
         </div>
