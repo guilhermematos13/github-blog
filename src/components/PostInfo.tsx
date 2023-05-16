@@ -13,14 +13,14 @@ export function PostInfo() {
       <div className="flex justify-between mb-5">
         <a
           href="#"
-          className="flex gap-2 text-blue items-center text-xs font-bold hover:border-b hover:border-blue "
+          className="flex gap-2 text-blue items-center text-xs font-bold border-b border-transparent hover:border-b hover:border-blue "
         >
           <FontAwesomeIcon icon={faChevronLeft} />
           VOLTAR
         </a>
         <a
           href="#"
-          className="flex gap-2 text-blue items-center text-xs font-bold hover:border-b hover:border-blue"
+          className="flex gap-2 text-blue items-center text-xs font-bold border-b border-transparent hover:border-b hover:border-blue"
         >
           VER NO GITHUB
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
