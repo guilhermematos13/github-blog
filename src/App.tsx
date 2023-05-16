@@ -1,7 +1,6 @@
-// import { Home } from './pages/Home';
-import { PostPage } from './pages/PostPage';
+import { Home } from './pages/Home';
 import './styles/input.css';
 
 export function App() {
-  return <PostPage />;
+  return <Home />;
 }

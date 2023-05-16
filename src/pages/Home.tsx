@@ -14,7 +14,7 @@ export function Home() {
           <span className="text-sm text-base-span">6 publicações</span>
         </div>
         <Input />
-        <div className="grid grid-cols-2 gap-8 pb-[234 px]">
+        <div className="grid grid-cols-2 gap-8 pb-[234px]">
           <Post />
           <Post />
           <Post />
