@@ -30,15 +30,15 @@ export function PostInfo() {
         JavaScript data types and data structures
       </strong>
       <div className="flex gap-8 mt-2">
-        <a href="#" className="flex items-center gap-2 text-base-label">
+        <a href="#" className="flex items-center gap-2 text-base-span">
           <FontAwesomeIcon icon={faGithub} />
           cameronwll
         </a>
-        <span className="flex items-center gap-2 text-base-label">
+        <span className="flex items-center gap-2 text-base-span">
           <FontAwesomeIcon icon={faCalendarDay} />
           Há 1 dia
         </span>
-        <span className="flex items-center gap-2 text-base-label">
+        <span className="flex items-center gap-2 text-base-span">
           <FontAwesomeIcon icon={faComment} />5 comentários
         </span>
       </div>
