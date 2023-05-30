@@ -7,30 +7,33 @@ import { toast } from 'react-hot-toast';
 
 import { Header } from '../components/Header';
 import { Input } from '../components/Input';
-import { Post } from '../components/Post';
+import { PostButton } from '../components/PostButton';
 import { Profile } from '../components/Profile';
 
 import { GithubProfileInterface } from '../interfaces/GithubProfileInterface';
 import { PostInterface } from '../interfaces/PostInterface';
+import { useNavigate } from 'react-router-dom';
 
 export function Home() {
+  const navigate = useNavigate();
   const [githubData, setGithubData] = useState<GithubProfileInterface>();
   const [post, setPost] = useState<PostInterface[]>([]);
+
+  function PostNavigation(number: number) {
+    navigate(`/post/${number}`);
+  }
 
   useEffect(() => {
     const fetchIssues = async () => {
       axios
-        .get(
-          'https://api.github.com/search/issues?q=%20repo:guilhermematos13/github-blog'
-        )
+        .get(`https://api.github.com/repos/guilhermematos13/github-blog/issues`)
         .then((response) => {
-          setPost(response.data.items);
+          setPost(response.data);
         });
     };
 
     fetchIssues();
   }, []);
-
   useEffect(() => {
     const fetchGithub = async () => {
       axios
@@ -45,7 +48,6 @@ export function Home() {
 
     fetchGithub();
   }, []);
-
   return (
     <div className="max-w-[1440px] mx-auto bg-base-background">
       <Header />
@@ -61,13 +63,18 @@ export function Home() {
         <div className="grid grid-cols-2 gap-8 pb-[234px]">
           {post.map((post: PostInterface) => {
             return (
-              <Post
+              <PostButton
+                key={post.number}
                 body={<ReactMarkdown children={post.body} />}
                 title={post.title}
+                number={post.number}
                 created_at={formatDistanceToNow(new Date(post.created_at), {
                   addSuffix: true,
                   locale: ptBR,
                 })}
+                onClick={() => {
+                  PostNavigation(post.number);
+                }}
               />
             );
           })}

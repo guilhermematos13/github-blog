@@ -4,6 +4,7 @@ export interface PostInterface {
   created_at: string;
   title: string;
   html_url: string;
+  number: number;
 
   user: {
     login: string;
