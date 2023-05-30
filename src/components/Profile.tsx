@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import avatar from '../assets/avatar.png';
 import {
   faArrowUpRightFromSquare,
   faBuilding,
