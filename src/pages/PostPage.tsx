@@ -31,7 +31,7 @@ export function PostPage() {
   return (
     <div className="max-w-[1440px] mx-auto bg-base-background">
       <Header />
-      <div className="px-[288px]">
+      <div className="xs:px-4 lg:px-[288px]">
         <PostInfo data={issue} />
         <PostContent data={issue} />
       </div>
