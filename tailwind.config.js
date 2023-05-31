@@ -23,6 +23,10 @@ export default {
       backgroundImage: {
         'background-image': 'url("/src/assets/background.svg")',
       },
+
+      screens: {
+        xs: '320px',
+      },
     },
   },
   variants: {

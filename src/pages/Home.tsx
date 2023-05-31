@@ -77,11 +77,13 @@ export function Home() {
   return (
     <div className="max-w-[1440px] mx-auto bg-base-background">
       <Header />
-      <div className="px-[288px] flex flex-col">
+      <div className="px-[288px] flex flex-col items-center xs:px-4">
         {githubData && <Profile data={githubData} />}
-        <div className="flex justify-between mt-[4.5rem] mb-3">
-          <strong className="text-lg text-base-text">Publicações</strong>
-          <span className="text-sm text-base-span">
+        <div className="w-full lg:max-w-[864px] flex justify-between mt-[4.5rem] mb-3">
+          <strong className="text-base-text xs:text-sm md:text-lg">
+            Publicações
+          </strong>
+          <span className="text-base-span xs:text-xs md:text-sm">
             {postSearch.length > 0 ? postSearch.length : post.length}{' '}
             {postSearch.length > 1 ? 'Publicações' : 'Publicação'}
           </span>
@@ -93,7 +95,7 @@ export function Home() {
             setSearch(event.target.value);
           }}
         />
-        <div className="grid grid-cols-2 gap-8 pb-[234px]">
+        <div className="xs:gap-4 xs:grid xs:grid-cols-1 xs:pb-[117px] md:gap-8 md:grid md:grid-cols-2 md:pb-[234px] lg:max-w-[864px]">
           {postSearch.length > 0
             ? postSearch.map((post: PostInterface) => {
                 return (
