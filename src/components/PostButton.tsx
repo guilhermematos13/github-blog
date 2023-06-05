@@ -21,7 +21,7 @@ export function PostButton({ body, created_at, title, ...props }: PostProps) {
           {created_at}
         </span>
       </div>
-      <div className="text-base-text line-clamp-4 xs:text-sm md:text-base">
+      <div className="text-base-text xs:text-sm md:text-base xs:line-clamp-3 md:line-clamp-4">
         {body}
       </div>
     </button>
